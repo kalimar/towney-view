@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150520031405) do
+ActiveRecord::Schema.define(version: 20150524225827) do
 
   create_table "homes", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -26,6 +26,12 @@ ActiveRecord::Schema.define(version: 20150520031405) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "street_address"
+    t.string   "primary_first_name"
+    t.string   "primary_last_name"
+    t.string   "primary_phone"
+    t.integer  "primary_birth_day"
+    t.integer  "primary_birth_month"
   end
 
   add_index "homes", ["email"], name: "index_homes_on_email", unique: true
