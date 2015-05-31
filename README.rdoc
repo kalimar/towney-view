@@ -4,3 +4,47 @@
 * Devise
 * http://tympanus.net/codrops/2011/09/20/responsive-image-gallery/
 * https://github.com/timcharper/calendar_date_select
+
+
+## Todo
+###Neighbors
+* View all neighbors
+  * This view contains avatar, Primary First Name, Address, Phone, Email (click on link for more details)
+  * Detailed view:
+    * Primary Contact Info
+    * Additional household members
+    * Pets
+    * Link to Photos
+    * Link to Recommendations
+* ability to email all primary contacts of neighbors at once
+* ability to email any one neighbor
+ 
+###Services
+* View all services
+* Recommend a service provider
+  * Service name
+  * Service type
+  * Service contact
+  * Service address
+  * Service phone
+  * Service email
+  * Why you like them
+* Eventually categorize and add search feature to services
+   
+###Photos
+  * Add a photo with a caption
+
+###My House
+  * Update Primary Contact Information
+  * Add new househould members
+  * update household members
+  * Add new pet
+  * update pet info
+  * Link to My photos
+  * Link to my Recommendations
+  * Link to my travel notifications
+
+###Travel
+* View all upcoming Travel plans
+* Notify all primary neighbors of travel plans - departure and return dates plus a quick note (which is optional)
+
