@@ -18,7 +18,6 @@
     * Link to Recommendations
 * ability to email all primary contacts of neighbors at once
 * ability to email any one neighbor
-* figure out how to show another users card, without allowing edit
  
 ###Services
 * View all services

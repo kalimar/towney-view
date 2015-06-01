@@ -1,6 +1,9 @@
 <div class="col-md-6 col-md-offset-3">
   <h2>My Home Profile</h2>
-  <%= link_to 'Edit', edit_registration_path(current_home) %>
+
+  <% if current_home.id == @home.id %>
+    <%= link_to 'Edit', edit_registration_path(current_home) %>
+  <% end %>
   <h3>Primary Contact</h3>
   
   
@@ -38,9 +41,13 @@
     </div>
   </div>
   <h3>Household</h3>
-  <%= link_to 'Add household member', '#' %>
+  <% if current_home.id == @home.id %>
+    <%= link_to 'Add household member', '#' %>
+  <% end %>
   
   <h3>Pets</h3>
-  <%= link_to 'Add pet', '#' %>
+  <% if current_home.id == @home.id %>
+    <%= link_to 'Add pet', '#' %>
+  <% end %>
   
 </div>

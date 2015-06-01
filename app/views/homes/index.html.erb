@@ -4,7 +4,7 @@
     <div class="media">
       <div class="media-left">
         <%# unless @home.avatar %>
-          <img src="http://placebear.com/100/100" alt="place ape" class="image-object">
+          <%= link_to image_tag('http://placebear.com/100/100'), home_path(home.id), class: "image-object" %>
         <%# else %>
           <!-- avatar -->
         <%# end %>

@@ -11,7 +11,7 @@ class HomesController < ApplicationController
   
 private
   def set_home
-    @home = current_home
+    @home = Home.find(params[:id])
   end
   
 end

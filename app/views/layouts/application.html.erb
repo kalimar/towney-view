@@ -26,13 +26,16 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <% if home_signed_in? %>
           <ul class="nav navbar-nav">
-              <li><%= link_to 'Neighbors', '/homes/index' %></a></li>
+              <li><%= link_to 'Neighbors', homes_path %></a></li>
               <li><a href="#">Services</a></li>
               <li><a href="#">Photos</a></li>
-              <li><%= link_to 'My Home', '/profile' %></li>
+              <li><%= link_to 'My Home', home_path(current_home) %></li>
               <li><a href="#">Travel</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
+              <li>
+                <p class='navbar-text text-capitalize'>Welcome <%= current_home.primary_first_name %></p>
+              </li>
               <li><%= link_to "Sign out", destroy_home_session_path, method: :delete %></li>
           </ul>
         <% else %>
