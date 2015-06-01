@@ -1,0 +1,46 @@
+<div class="col-md-6 col-md-offset-3">
+  <h2>My Home Profile</h2>
+  <%= link_to 'Edit', edit_registration_path(current_home) %>
+  <h3>Primary Contact</h3>
+  
+  
+  <div class="row">
+    <div class="col-md-6">
+      <address>
+        <div class="media">
+          <div class="media-left">
+            <%# unless @home.avatar %>
+              <img src="http://placebear.com/100/100" alt="place ape" class="image-object">
+            <%# else %>
+              <!-- avatar -->
+            <%# end %>
+          </div>
+          <div class="media-body">
+            <span class="glyphicon glyphicon-user" aria-hidden="true"></span> <strong><%= @home.primary_first_name %> <%= @home.primary_last_name %></strong></br>
+            <span class="glyphicon glyphicon-home" aria-hidden="true"></span> <%= @home.street_address %></br>
+            <span class="glyphicon glyphicon-phone" aria-hidden="true"></span> <%= @home.primary_phone %></br>
+            <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> <%= @home.alt_phone %></br>
+            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <%= mail_to @home.email %></br>
+          </div>
+        </div>
+      </address>
+    </div>
+    <div class="col-md-6">
+      <p>
+        <%= link_to 'Link to Photos', '#' %>
+      </p>
+      <p>
+        <%= link_to 'Link to Recommendations', '#' %>
+      </p>
+      <p>
+        <%= link_to 'Link to Travel Notifications', '#' %>
+      </p>
+    </div>
+  </div>
+  <h3>Household</h3>
+  <%= link_to 'Add household member', '#' %>
+  
+  <h3>Pets</h3>
+  <%= link_to 'Add pet', '#' %>
+  
+</div>

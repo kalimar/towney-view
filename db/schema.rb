@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150524225827) do
+ActiveRecord::Schema.define(version: 20150601004915) do
 
   create_table "homes", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20150524225827) do
     t.string   "primary_phone"
     t.integer  "primary_birth_day"
     t.integer  "primary_birth_month"
+    t.string   "alt_phone"
   end
 
   add_index "homes", ["email"], name: "index_homes_on_email", unique: true
