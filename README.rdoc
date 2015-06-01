@@ -6,6 +6,8 @@
 * https://github.com/timcharper/calendar_date_select
 
 
+Figure out how to really block other users from editing other users
+
 ## Todo
 ###Neighbors
 * View all neighbors
