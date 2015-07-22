@@ -13,7 +13,7 @@
         <div class="media">
           <div class="media-left">
             <%# unless @home.avatar %>
-              <img src="http://placebear.com/100/100" alt="place ape" class="image-object">
+              <%= avatar 100 %>
             <%# else %>
               <!-- avatar -->
             <%# end %>
@@ -30,22 +30,22 @@
     </div>
     <div class="col-md-6">
       <p>
-        <%= link_to 'Link to Photos', '#' %>
+        <%= link_to 'Link to Photos', '#' %> <small>coming soon</small>
       </p>
       <p>
-        <%= link_to 'Link to Recommendations', '#' %>
+        <%= link_to 'Link to Recommendations', '#' %> <small>coming soon</small>
       </p>
       <p>
-        <%= link_to 'Link to Travel Notifications', '#' %>
+        <%= link_to 'Link to Travel Notifications', '#' %> <small>coming soon</small>
       </p>
     </div>
   </div>
-  <h3>Household</h3>
+  <h3>Household <small>coming soon</small></h3>
   <% if current_home.id == @home.id %>
     <%= link_to 'Add household member', '#' %>
   <% end %>
   
-  <h3>Pets</h3>
+  <h3>Pets <small>coming soon</small></h3>
   <% if current_home.id == @home.id %>
     <%= link_to 'Add pet', '#' %>
   <% end %>

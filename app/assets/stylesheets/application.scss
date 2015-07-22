@@ -13,3 +13,37 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "stylish-portfolio";
+@import "font-awesome/css/font-awesome.min.css";
+
+.navbar-inverse { border-radius: 0 }
+#top.header {
+  .text-vertical-center {
+    vertical-align: initial;
+    padding-top: 30px;
+  }
+}
+
+/* mobile first */
+.container-fluid {
+  header#top {
+    height: 200px;
+  }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container-fluid {
+    header#top {
+      height: 500px;
+    }
+  }
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container-fluid {
+    header#top {
+      height: 800px;
+    }
+  }
+}

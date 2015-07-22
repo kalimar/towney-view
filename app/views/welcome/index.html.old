@@ -1,0 +1,39 @@
+<%= image_tag "street_view.png", class: "img-responsive", alt: "Responsive hero image" %>
+<div class="row text-center">
+  <!-- <div class="col-md-3 col-xs-6">
+    <div class="media">
+      <div class="row">
+        <div class="media-left pull-left col-sm-8">
+          <a href="#" class="thumbnail">
+            <%#= image_tag "neighbors.jpg", alt: "street view thumbnail", class: "media-object" %>
+          </a>
+        </div>
+        <div class="media-body">
+          <h4 id="media-heading" class="media-heading">Neighbors</h4>
+          <p class="hidden-xs">Get in touch with your neighbors</p>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <div class="col-xs-6 col-md-2 col-md-offset-1">
+    <%= link_to (image_tag "neighbors.jpg", alt: "neighbors thumbnail"), homes_path, class: 'thumbnail' %>
+  </div>
+  <div class="col-xs-6 col-md-2">
+    <a href="#" class="thumbnail">
+      <%= image_tag "services.png", alt: "services thumbnail" %>
+    </a>
+  </div>
+  <div class="col-xs-6 col-md-2">
+    <a href="#" class="thumbnail">
+      <%= image_tag "camera.png", alt: "street view thumbnail" %>
+    </a>
+  </div>
+  <div class="col-xs-6 col-md-2">
+    <%= link_to (image_tag "i-love-my-home600.jpg", alt: "street view thumbnail"), '/profile', html: { class: "thumbnail"} %>
+  </div>
+  <div class="col-xs-6 col-md-2">
+    <a href="#" class="thumbnail">
+      <%= image_tag "airplane.jpg", alt: "airplane thumbnail" %>
+    </a>
+  </div>
+</div>
