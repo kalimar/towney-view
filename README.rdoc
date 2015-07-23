@@ -58,3 +58,6 @@ Figure out how to really block other users from editing other users
 * View all upcoming Travel plans
 * Notify all primary neighbors of travel plans - departure and return dates plus a quick note (which is optional)
 
+
+###Nice To Have
+Use an simple avatar if none are available online
