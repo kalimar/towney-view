@@ -3,7 +3,6 @@
   <p id="notice"><%= notice %></p>
   
  
- 
       <% @recommendations.each do |recommendation| %>
           <span><%= recommendation.company_name %></span>
           <span><%= recommendation.industry %></span>
@@ -11,13 +10,13 @@
           <span><%= recommendation.address %></span>
           <span><%= recommendation.phone %></span>
           <span><%= recommendation.email %></span>
-          <span><%= recommendation.notes %></span>
           <span><%= link_to 'Show', recommendation %></span>
-          <span><%= link_to 'Edit', edit_recommendation_path(recommendation) %></span>
-          <span><%= link_to 'Destroy', recommendation, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+          <% if current_home.id == recommendation.home_id %>
+            <span><%= link_to 'Edit', edit_recommendation_path(recommendation) %></span>
+            <span><%= link_to 'Destroy', recommendation, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+          <% end %>
+        </br>
       <% end %>
-  
-  <br>
   
   <%= link_to 'New Recommendation', new_recommendation_path %>
 </div>
