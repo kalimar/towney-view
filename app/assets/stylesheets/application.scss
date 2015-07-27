@@ -38,6 +38,14 @@
     header#top {
       height: 500px;
     }
+    #services {
+      .container {
+        .col-md-3.col-sm-6 {
+          padding-right: 4px;
+          padding-left: 4px;
+        }
+      }
+    }
   }
 }
 /* Medium devices (desktops, 992px and up) */

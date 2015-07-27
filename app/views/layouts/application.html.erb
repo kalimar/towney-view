@@ -44,7 +44,7 @@
               <li><%= link_to 'Neighbors', homes_path %></a></li>
               <li><%= link_to 'Recommendations', recommendations_path %></li>
               <li><%= link_to 'Your Home', home_path(current_home) %></li>
-              <li><a href="#">Travel</a></li>
+              <li><%= content_tag :a, "Travel", onclick: "alert('Coming Soon!');" %></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
               <li>
