@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150601004915) do
+ActiveRecord::Schema.define(version: 20150723024239) do
 
   create_table "homes", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -37,5 +37,34 @@ ActiveRecord::Schema.define(version: 20150601004915) do
 
   add_index "homes", ["email"], name: "index_homes_on_email", unique: true
   add_index "homes", ["reset_password_token"], name: "index_homes_on_reset_password_token", unique: true
+
+  create_table "household_members", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "phone_number"
+    t.string   "email"
+    t.integer  "birth_day"
+    t.integer  "birth_month"
+    t.integer  "home_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "household_members", ["home_id"], name: "index_household_members_on_home_id"
+
+  create_table "recommendations", force: :cascade do |t|
+    t.string   "company_name"
+    t.string   "industry"
+    t.string   "contact_name"
+    t.string   "address"
+    t.string   "phone"
+    t.string   "email"
+    t.text     "notes"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "home_id"
+  end
+
+  add_index "recommendations", ["home_id"], name: "index_recommendations_on_home_id"
 
 end

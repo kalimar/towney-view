@@ -8,6 +8,7 @@
 
 Figure out how to really block other users from editing other users
 
+
 ## Todo
 ###Neighbors
 * View all neighbors

@@ -1,0 +1,22 @@
+<div class="col-md-offset-3">
+  <h2>Recommended Services <br><small>Find and recommend services you like and trust</small></h1>
+  <p id="notice"><%= notice %></p>
+  
+ 
+      <% @recommendations.each do |recommendation| %>
+          <span><%= recommendation.company_name %></span>
+          <span><%= recommendation.industry %></span>
+          <span><%= recommendation.contact_name %></span>
+          <span><%= recommendation.address %></span>
+          <span><%= recommendation.phone %></span>
+          <span><%= recommendation.email %></span>
+          <span><%= link_to 'Show', recommendation %></span>
+          <% if current_home.id == recommendation.home_id %>
+            <span><%= link_to 'Edit', edit_recommendation_path(recommendation) %></span>
+            <span><%= link_to 'Destroy', recommendation, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+          <% end %>
+        </br>
+      <% end %>
+  
+  <%= link_to 'New Recommendation', new_recommendation_path %>
+</div>
