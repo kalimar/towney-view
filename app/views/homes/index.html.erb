@@ -1,22 +1,24 @@
-<h2>Your Neighbors</h2>
-<% @homes.each do |home| %>
-<address>
-  <div class="media">
-    <div class="media-left">
-      <%# unless @home.avatar %>
-        <%= avatar 100 %>
-      <%# else %>
-        <!-- avatar -->
-      <%# end %>
+<div class="col-md-6 col-md-offset-3">
+  <h2>Your Neighbors</h2>
+  <% @homes.each do |home| %>
+  <address>
+    <div class="media">
+      <div class="media-left">
+        <%# unless @home.avatar %>
+          <%= avatar 100 %>
+        <%# else %>
+          <!-- avatar -->
+        <%# end %>
+      </div>
+      <div class="media-body">
+        <span class="glyphicon glyphicon-user" aria-hidden="true"></span> <strong><%= home.primary_first_name %> <%= home.primary_last_name %></strong></br>
+        <span class="glyphicon glyphicon-home" aria-hidden="true"></span> <%= home.street_address %></br>
+        <span class="glyphicon glyphicon-phone" aria-hidden="true"></span> <%= home.primary_phone %></br>
+        <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> <%= home.alt_phone %></br>
+        <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <%= mail_to home.email %></br>
+      </div>
     </div>
-    <div class="media-body">
-      <span class="glyphicon glyphicon-user" aria-hidden="true"></span> <strong><%= home.primary_first_name %> <%= home.primary_last_name %></strong></br>
-      <span class="glyphicon glyphicon-home" aria-hidden="true"></span> <%= home.street_address %></br>
-      <span class="glyphicon glyphicon-phone" aria-hidden="true"></span> <%= home.primary_phone %></br>
-      <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> <%= home.alt_phone %></br>
-      <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <%= mail_to home.email %></br>
-    </div>
-  </div>
-</address>
-
-<% end %>
+  </address>
+  
+  <% end %>
+</div>
