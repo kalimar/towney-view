@@ -1,0 +1,54 @@
+<%= form_for(@recommendation) do |f| %>
+  <% if @recommendation.errors.any? %>
+    <div id="error_explanation" class="alert alert-danger" role="alert">
+      <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+      <span class="sr-only">Error:</span>
+      <%= pluralize(@recommendation.errors.count, "error") %> prohibited this recommendation from being saved:
+      <ul>
+      <% @recommendation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="field">
+    <%= f.label :company_name %><br>
+    <%= f.text_field :company_name %>
+  </div>
+  <div class="field">
+    <%= f.label :industry %>
+    <div id="industryList"><%= f.select :industry, Recommendation.available_industries %>
+      <span id="addIndustry">
+        <a href="#">Add an industry...</a>
+      </span>
+    </div>
+    <div style="display:none" id="newIndustry">
+      <span id="newIndustryField"><%= text_field_tag :new_industry %></span>
+      <a href="#" id="showIndustryList">Show industries...</a>
+    </div>
+  </div>
+  <div class="field">
+    <%= f.label :contact_name %><br>
+    <%= f.text_field :contact_name %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br>
+    <%= f.text_area :notes %>
+  </div>
+  <div class="actions">
+    <%= button_tag "Submit", class: "btn btn-primary"%>
+  </div>
+<% end %>

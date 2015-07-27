@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @recommendation.company_name %>
+</p>
+
+<p>
+  <strong>Industry:</strong>
+  <%= @recommendation.industry %>
+</p>
+
+<p>
+  <strong>Contact name:</strong>
+  <%= @recommendation.contact_name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @recommendation.address %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @recommendation.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @recommendation.email %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @recommendation.notes %>
+</p>
+
+<%= link_to 'Edit', edit_recommendation_path(@recommendation) %> |
+<%= link_to 'Back', recommendations_path %>
