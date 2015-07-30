@@ -50,4 +50,10 @@
     <%= link_to 'Add pet', '#' %>
   <% end %>
   
+  <div>
+    <% if current_home.admin? %>
+    <h3>Users awaiting approval</h3>
+    <% end %>
+  </div>
+ 
 </div>
