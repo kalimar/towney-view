@@ -50,10 +50,15 @@
     <%= link_to 'Add pet', '#' %>
   <% end %>
   
-  <div>
-    <% if current_home.admin? %>
-    <h3>Users awaiting approval</h3>
-    <% end %>
-  </div>
- 
+  <% if current_home.admin? && current_home.id == @home.id %>
+    <h3>User approval</h3>
+    <table class="table">
+      <% @homes.each do |home| %>
+          <tr>
+              <td><%= home.email %></td>
+              <td><%= home.approved %></td>
+          </tr>
+      <% end %>
+    </table>
+  <% end %>
 </div>

@@ -7,6 +7,11 @@ class HomesController < ApplicationController
   end
   
   def show
+    if params[:approved] == "false"
+      @homes = Home.find_all_by_approved(false)
+    else
+      @homes = Home.all
+    end
   end
   
 private

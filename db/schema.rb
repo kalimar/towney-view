@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150730005903) do
+ActiveRecord::Schema.define(version: 20150730012828) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -51,8 +51,8 @@ ActiveRecord::Schema.define(version: 20150730005903) do
     t.integer  "primary_birth_day"
     t.integer  "primary_birth_month"
     t.string   "alt_phone"
-    t.boolean  "approved"
     t.boolean  "admin"
+    t.boolean  "approved"
   end
 
   add_index "homes", ["email"], name: "index_homes_on_email", unique: true

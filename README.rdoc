@@ -34,9 +34,6 @@ Figure out how to really block other users from editing other users
   * Why you like them
 * Eventually categorize and add search feature to services
    
-###Photos
-  * Add a photo with a caption
-
 ###My House
   * Update Primary Contact Information
   * Add new househould members
@@ -61,4 +58,10 @@ Figure out how to really block other users from editing other users
 
 
 ###Nice To Have
-Use an simple avatar if none are available online
+Use a simple avatar if none are available online
+Approve users through web interface
+
+
+
+
+currently have to approve users manually in rails console
