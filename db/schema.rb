@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150730012828) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -28,8 +31,8 @@ ActiveRecord::Schema.define(version: 20150730012828) do
     t.datetime "updated_at"
   end
 
-  add_index "admins", ["email"], name: "index_admins_on_email", unique: true
-  add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+  add_index "admins", ["email"], name: "index_admins_on_email", unique: true, using: :btree
+  add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
 
   create_table "homes", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -55,22 +58,8 @@ ActiveRecord::Schema.define(version: 20150730012828) do
     t.boolean  "approved"
   end
 
-  add_index "homes", ["email"], name: "index_homes_on_email", unique: true
-  add_index "homes", ["reset_password_token"], name: "index_homes_on_reset_password_token", unique: true
-
-  create_table "household_members", force: :cascade do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "phone_number"
-    t.string   "email"
-    t.integer  "birth_day"
-    t.integer  "birth_month"
-    t.integer  "home_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
-  add_index "household_members", ["home_id"], name: "index_household_members_on_home_id"
+  add_index "homes", ["email"], name: "index_homes_on_email", unique: true, using: :btree
+  add_index "homes", ["reset_password_token"], name: "index_homes_on_reset_password_token", unique: true, using: :btree
 
   create_table "recommendations", force: :cascade do |t|
     t.string   "company_name"
@@ -85,6 +74,7 @@ ActiveRecord::Schema.define(version: 20150730012828) do
     t.integer  "home_id"
   end
 
-  add_index "recommendations", ["home_id"], name: "index_recommendations_on_home_id"
+  add_index "recommendations", ["home_id"], name: "index_recommendations_on_home_id", using: :btree
 
+  add_foreign_key "recommendations", "homes"
 end
